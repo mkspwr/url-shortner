@@ -1,10 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app=Flask(__name__)
-
-
-print("Name - " + __name__)
+app = Flask(__name__)
 
 @app.route('/')
+
 def home():
-    return "<html> Hello Vihaan!</html>"
+    return render_template('home.html')
+
+@app.route('/about')
+def about():
+    return'This is a URL shortener'
