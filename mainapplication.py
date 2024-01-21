@@ -9,4 +9,4 @@ def home():
 
 @app.route('/about')
 def about():
-    return'This is a URL shortener'
+    return'This is Vihaan URL shortener'
