@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -12,4 +12,4 @@ def about():
     return'This is Vihaan URL shortener'
 @app.route('/your-url')
 def your_url():
-    return render_template('your_url.html')
+    return render_template('your_url.html', code=request.args[code])
