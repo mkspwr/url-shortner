@@ -10,3 +10,6 @@ def home():
 @app.route('/about')
 def about():
     return'This is Vihaan URL shortener'
+@app.route('/your-url')
+def your_url():
+    return render_template('your_url.html')
